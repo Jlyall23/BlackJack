@@ -1,0 +1,81 @@
+/*Title*/
+h1{
+    color: red;
+    text-align: center;
+    
+}
+/* Hit & Stand Button Container*/
+.basicBtns{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+}
+/* New Hand Button Container*/
+#newHandBtn{
+ position: absolute;
+ text-align: center;
+ bottom: 0;
+ left: 0;
+}
+/* The Actual Hit Button*/
+#hit{
+    color: white;
+    background-color: red;
+    height: 70px;
+    width: 70px;
+    font-size: x-large;
+}
+/*The Actual Stand Button*/
+#stand{
+    color: white;
+    background-color: green;
+    height: 75px;
+    width: 75px;
+    font-size: x-large;
+}
+
+/*The Actual New Hand Button*/
+#newHand{
+    color: white;
+    background-color: blue;
+    height: 75px;
+    width: 75px;
+    font-size: x-large;
+}
+/* Player & Dealer Points text */
+.PlayerDealerPoints{
+    color: red;
+    font-size: large;
+}
+/* # of points text */
+.pointTotal{
+    color: yellow;
+    font-size: xx-large;
+}
+/* container holding everything to do with points*/
+.pointsContainer{
+    background-color: rgb(17, 77, 17);
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    float: left;
+    width: 200px;
+    height: 200px
+}
+/*container for players cards*/
+.playerCards{
+    color: aqua;
+}
+/*container for dealers cards*/
+.dealerCards{
+    color: blue;
+}
+
+body{
+    background-image: url("blackjacktable.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
