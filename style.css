@@ -66,11 +66,26 @@ h1{
 }
 /*container for players cards*/
 .playerCards{
-    color: aqua;
+    background-color: aqua;
+   
+   position:fixed;
+   width: fit-content;
+   height: fit-content;
+   bottom: 0;
+   
+  
+    
+    
 }
 /*container for dealers cards*/
 .dealerCards{
     color: blue;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 0;
+    right: 30%;
+    left: 30%;
 }
 
 body{
