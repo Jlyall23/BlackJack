@@ -18,6 +18,15 @@ h1{
  bottom: 0;
  left: 0;
 }
+
+/*Deal Button*/
+#newDeal{
+    color: white;
+    background-color: purple;
+    height: 75px;
+    width: 75px;
+    font-size: x-large;
+}
 /* The Actual Hit Button*/
 #hit{
     color: white;
@@ -41,7 +50,7 @@ h1{
     background-color: blue;
     height: 75px;
     width: 75px;
-    font-size: x-large;
+    font-size: large;
 }
 /* Player & Dealer Points text */
 .PlayerDealerPoints{

@@ -89,7 +89,7 @@ playersCards.push(dealtPlayerCard)
 return playersCards
 }
 const playerCards =  dealPlayerCards(deck)
-console.log("Players Cards" , playerCards)
+
 
 //deals 1 face up to dealer and 1 face down.. not connected to dealer points yet
     // if player stands hidden card flips over and they're both added to dealer total
@@ -105,8 +105,26 @@ console.log("Players Cards" , playerCards)
      return dealerCards
 }
 const dealerCards = dealDealerCards(deck)
-console.log("Dealers Cards" , dealerCards)
 
+function playerHit(){ 
+    const playerHit = deck.shift()
+    playerCards.push(playerHit)
+    console.log("Players Cards" , playerCards )
+    }
+    function clearTable(){
+        dealerCards.length = 0
+        playerCards.length=0
+       }
+
+//Experiment
+function deal(){
+console.log("Dealers Cards" , dealerCards)
+console.log("Players Cards" , playerCards)
+}
+deal()
+playerHit()
+//playerHit()
+clearTable()
 //function to reveal dealers card when needed
 
 
