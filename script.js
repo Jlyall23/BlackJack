@@ -282,6 +282,9 @@ standBtn.addEventListener("click", ()=>{doesDealerHit()})
     dealerTotal=0
     playerTotalHTML.innerHTML = playerTotal
     dealerTotalHTML.innerHTML = dealerTotal
+    while(displayedDealerCards.length >0){
+        displayedDealerCards.splice(0,1)
+    }
 
     
    }

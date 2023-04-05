@@ -15,7 +15,7 @@ if the dealer doesnt bust you compare points, closest to 21 wins.
 Code languages:
 I used HTML, CSS, and JavaScript for this project
 
-How does my project stand out?
+
 
 How to play the game:
 When the page loads you are automatically dealt 2 cards and so is the dealer. if you want to hit you press the hit button, which deals you another card.
