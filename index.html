@@ -20,12 +20,16 @@
         <button id="newDeal"> Deal</button>
     </div>
     <!--Container for Players Cards-->
-    <div class="playerCards">
+    <div id="playerCardsContainer">
+    <div id="playerCards">
 
     </div>
+    </div>
     <!--Container for Dealers Cards-->
-    <div class="dealerCards">
-     
+    <div id="dealerCardsContainer">
+    <div id="dealerCards">
+     <img id="hiddenCard" src="./cards/back.jpg">
+    </div>
     </div>
     <!--Container for Points-->
     <div class="pointsContainer">
@@ -35,50 +39,16 @@
        
     </div>
     <!--Container for Scoreboard-->
-     <div id="scoreboard">
-
+     <div class="scoreboard">
+        <p class="score" id="dealerScore"><span class="playerDealerScoreText"> Dealer </br>Score:</span><br/><span class="scoreboardTotal" id="dealerScoreNum">0</span> </p>
+            </br>
+        <p class="score" id="playerScore"><span class="playerDealerScoreText"> Player </br>Score:</span><br/><span class="scoreboardTotal" id="playerScoreNum">0</span> </p>
+    
     </div>
-
-    <!------------------------------------Cards------------------------------------------->
-    <div id="ace">
-        
-    </div>
-    <div id="king">
-
-    </div>
-    <div id="queen">
-
-    </div>
-    <div id="jack">
-
-    </div>
-    <div id="ten">
-
-    </div>
-    <div id="nine">
-
-    </div>
-    <div id="eight">
-
-    </div>
-    <div id="seven">
-
-    </div>
-    <div id="six">
-
-    </div>
-    <div id="five">
-
-    </div>
-    <div id="four">
-
-    </div>
-    <div id="three">
-
-    </div>
-    <div id="two">
-
-    </div>
+    <!--Results-->
+    <div class="resultsContainer"
+    <p id="results"></p>
+    
 
 
 

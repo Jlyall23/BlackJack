@@ -6,17 +6,25 @@ h1{
 }
 /* Hit & Stand Button Container*/
 .basicBtns{
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    right: 0;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   position: fixed;
+   bottom: 0;
+   right: 0;
+
+   
 }
 /* New Hand Button Container*/
 #newHandBtn{
- position: absolute;
- text-align: center;
- bottom: 0;
- left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+ 
+
 }
 
 /*Deal Button*/
@@ -64,41 +72,113 @@ h1{
 }
 /* container holding everything to do with points*/
 .pointsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 50;
+    left: 0;
+ 
+
     background-color: rgb(17, 77, 17);
     border: 1px solid white;
     border-radius: 5px;
     padding: 5px;
     text-align: center;
-    float: left;
+   
     width: 200px;
-    height: 200px
+    height: 200px;
 }
-/*container for players cards*/
-.playerCards{
-    background-color: aqua;
-   
-   position:fixed;
-   width: fit-content;
-   height: fit-content;
-   bottom: 0;
-   
+
+/*player and dealer scoreboard text*/
+.playerDealerScoreText{
+    color: red;
+    font-size: large; 
   
+}
+
+/* # on scoreboard text*/
+.scoreboardTotal{
+    color: yellow;
+    font-size: xx-large;
+}
+
+/*container holding everything to do with scoreboard*/
+/* .scoreboard{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    top: 50;
+    right: 0;
+ 
+
+    background-color: rgb(17, 77, 17);
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+   
+    width: 200px;
+    height: 200px;
+} */
+
+/*container for players cards*/
+/* .playerCardsContainer{
+    background-color: aqua;
+    display: flex;
+    height: 100vh;
     
-    
+} */
+.playersCards{
+    display: flex;
+    height: 100vh;
+    align-items: flex-end;
+    justify-content: center;
+    margin: auto 0;
 }
 /*container for dealers cards*/
 .dealerCards{
-    color: blue;
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    top: 0;
+   color: blue;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   position: fixed;
+   top: 0;
+   right: 30%;
+   left: 30%;
+}
+/*Styling for the actual dealers cards*/
+#dealerCards img{
+height: 150px;
+width: 100px;
+margin: 4px;
+}
+/*Styling for the actual players cards*/
+.playerCards img{
+    height: 150px;
+    width: 100px;
+    margin: 4px;
+}
+/*DOM message container*/
+.resultsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 0;
     right: 30%;
     left: 30%;
 }
-
+/*DOM message*/
+#results{
+    background-color: black;
+    color: yellow;
+}
 body{
-    background-image: url("blackjacktable.png");
+    /*background-image: url("blackjacktable.png");*/
+    display: flex;
+    background-color: indianred;
     background-repeat: no-repeat;
     background-size: cover;
     
