@@ -60,6 +60,8 @@ let playerCards = []
 playerCards =  dealPlayerCards(deck)
 let dealerCards= []
 dealerCards = dealDealerCards(deck)
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 //Function to deal 2 cards to player  
@@ -205,6 +207,7 @@ function BlackJackCheck(){
     playerCards.push(playerHit)
     //updates DOM
    playerTotalHTML.innerHTML = playerTotal
+   displayPlayerCards()
    
     playerTotalPoints()
     
@@ -226,7 +229,7 @@ function BlackJackCheck(){
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-// STAND BUTTON
+// STAND BUTTONdis
    //checks if dealer is under 17. if so, runs dealerHit()
     function doesDealerHit(){
         hitBtn.disabled = true
@@ -260,6 +263,7 @@ standBtn.addEventListener("click", ()=>{doesDealerHit()})
         dealerCards.push(dealerHitCard)
      console.log("Dealers Cards" , dealerCards , dealerTotal)
      dealerTotalHTML.innerHTML = dealerTotal
+     displayDealerCards()
        dealerTotalPoints()
      }
   // standBtn.addEventListener("click", revealCard)
@@ -270,12 +274,15 @@ standBtn.addEventListener("click", ()=>{doesDealerHit()})
  
    function clearTable(){
     scoreBoard()
-    dealerCards.length = 0
-    playerCards.length=0
+
+    dealerCards=[]
+    playerCards=[]
+    
     playerTotal=0
     dealerTotal=0
     playerTotalHTML.innerHTML = playerTotal
     dealerTotalHTML.innerHTML = dealerTotal
+
     
    }
    function newHand(){
@@ -300,6 +307,9 @@ function newDeal(){
     console.log("Dealers Cards" , dealDealerCards(deck))
     playerTotalHTML.innerHTML = playerTotal
     dealerTotalHTML.innerHTML = dealerTotal
+   
+    displayDealerCards()
+    displayPlayerCards()
 }
 
 dealBtn.addEventListener("click" , newDeal)
@@ -386,7 +396,7 @@ let CARDImg = {
     '7S':"seven.png",
     '7C':"seven.png",
     '7H':"seven.png",
-    '7H':"seven.png",
+    '7D':"seven.png",
     '8S':"eight.png",
     '8C':"eight.png",
     '8H':"eight.png",
@@ -418,31 +428,81 @@ let CARDImg = {
 
 
 }
+let displayedPlayerCards = new Set()
+function displayPlayerCards(){
+    for(let i=0; i<playerCards.length;i++){
+        const card=playerCards[i]
+        if(!displayedPlayerCards.has(card)){
+            const playerimg=document.createElement('img')
+            playerimg.src=`cards/${CARDImg[card]}`
+            document.getElementById("playerCards").append(playerimg)
+            displayedPlayerCards.add(card)
+        }
+    }
+}
+displayPlayerCards()
+let displayedDealerCards = new Set()
+function displayDealerCards(){
+    for(let i=0; i<dealerCards.length;i++){
+        const card=dealerCards[i]
+        if(!displayedDealerCards.has(card)){
+            const dealerimg=document.createElement('img')
+            dealerimg.src=`cards/${CARDImg[card]}`
+            document.getElementById("dealerCards").append(dealerimg)
+            displayedDealerCards.add(card)
+        }
+    }
+}
+displayDealerCards()
+
 //dealerCards.map((i)=>displayDealerCards())
-let DealerCardsHTML = dealerCards.map(function(){
+//let DealerCardsHTML = dealerCards.map(function(){
     
-             //function displayDealerCards(){
-             let cardPIC = dealerCards[0]
+            //  function displayDealerCards(){
+            //     for(let i=0;i<dealerCards.length;i++){
+            //  let cardPic = dealerCards[i]
 
-             let dealerCardImg= document.createElement("img")
+            //  let dealerCardImg= document.createElement("img")
              
-                dealerCardImg.src = "cards/" + CARDImg[cardPIC]
-                document.getElementById("dealerCards").append(dealerCardImg)
-           //  }
-             return dealerCards
+            //     dealerCardImg.src = "cards/" + CARDImg[cardPic]
+            //     document.getElementById("dealerCards").append(dealerCardImg)
+            // }
+            // }
+             
         
-})
+//})
+//displayDealerCards()
+// function displayPlayerCards(){
+// for (let i=0; i<playerCards.length;i++){
+//     let cardPic = playerCards[i]
+//     let playerCardImg= document.createElement("img")
+//     playerCardImg.src = "cards/" + CARDImg[cardPic]
+//     document.getElementById("playerCards").append(playerCardImg)
+// }
+// }
 
-let playerCardDisplay = playerCards.map(playerCard=>{
-    let cardPIC = playerCards[0]
 
-    let playerCardImg= document.createElement("img")
+// displayPlayerCards()
+// function displayHitPlayerCards(){
+//     for (let i=2; i<playerCards.length;i++){
+//         let cardPic = playerCards[i]
+//         let playerCardImg= document.createElement("img")
+//         playerCardImg.src = "cards/" + CARDImg[cardPic]
+//         document.getElementById("playerCards").append(playerCardImg)
+//     }
+// }
+
+//displayPlayerCards()
+// let playerCardDisplay = playerCards.map(playerCard=>{
+//     let cardPIC = playerCards[0]
+
+//     let playerCardImg= document.createElement("img")
     
-       playerCardImg.src = "cards/" + CARDImg[cardPIC]
-       document.getElementById("playerCards").append(playerCardImg)
-  //  }
-    return img
-})
+//        playerCardImg.src = "cards/" + CARDImg[cardPIC]
+//        document.getElementById("playerCards").append(playerCardImg)
+//   //  }
+//     return img
+// })
 // function displayDealerCards(){
 //      let cardPIC = dealerCards[0]
 //      let dealerCardImg= document.createElement("img")

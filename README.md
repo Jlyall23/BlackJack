@@ -24,9 +24,11 @@ When you hit new game you must hit deal. This will start the game all over again
 Whoever has the most points when the deck is empty wins!
 
 GITHUB Pages Link:
+https://jlyall23.github.io/BlackJack/
+
 
 Unsolved Problems:
 Hiding the first dealer card like in real blackjack.
 A way to make a new deck without refreshing the page
-
+How to make the dealer hit as many times as needed without having to hit stand over and over
 

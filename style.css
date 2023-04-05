@@ -72,11 +72,9 @@ h1{
 }
 /* container holding everything to do with points*/
 .pointsContainer{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    
     position: fixed;
-    bottom: 50;
+    top: 10%;
     left: 0;
  
 
@@ -87,7 +85,7 @@ h1{
     text-align: center;
    
     width: 200px;
-    height: 200px;
+    height: 250px;
 }
 
 /*player and dealer scoreboard text*/
@@ -104,12 +102,10 @@ h1{
 }
 
 /*container holding everything to do with scoreboard*/
-/* .scoreboard{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+ .scoreboard{
+   
     position: fixed;
-    top: 50;
+    top: 10%;
     right: 0;
  
 
@@ -120,33 +116,26 @@ h1{
     text-align: center;
    
     width: 200px;
-    height: 200px;
-} */
+    height: 250px;
+} 
 
-/*container for players cards*/
-/* .playerCardsContainer{
-    background-color: aqua;
-    display: flex;
-    height: 100vh;
+
     
-} */
-.playersCards{
-    display: flex;
-    height: 100vh;
-    align-items: flex-end;
-    justify-content: center;
-    margin: auto 0;
+ /*container for players cards*/
+#playerCards{
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 /*container for dealers cards*/
-.dealerCards{
+#dealerCards{
    color: blue;
-   display: flex;
-   justify-content: center;
-   align-items: flex-end;
+ 
    position: fixed;
-   top: 0;
-   right: 30%;
-   left: 30%;
+   top: 8%;
+   left: 50%;
+   transform: translateX(-50%);
 }
 /*Styling for the actual dealers cards*/
 #dealerCards img{
@@ -155,10 +144,12 @@ width: 100px;
 margin: 4px;
 }
 /*Styling for the actual players cards*/
-.playerCards img{
+#playerCards img{
     height: 150px;
     width: 100px;
     margin: 4px;
+    
+    
 }
 /*DOM message container*/
 .resultsContainer{
@@ -176,8 +167,8 @@ margin: 4px;
     color: yellow;
 }
 body{
-    /*background-image: url("blackjacktable.png");*/
-    display: flex;
+    background-image: url("blackjacktable.png");
+    
     background-color: indianred;
     background-repeat: no-repeat;
     background-size: cover;
